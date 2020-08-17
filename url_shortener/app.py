@@ -3,21 +3,19 @@ import string
 
 
 class URLShortener():
-    def __init__(self, url):
-        self.url = url
+    def __init__(self, incoming_url):
+        self.incoming_url = incoming_url
 
-    def shorten(self, num_length=3, char_length=3):
-        letters = string.ascii_letters
-        nums = string.digits
+    def shorten(self, char_length=6):
+        letters_and_nums = string.ascii_letters + string.digits
 
-        letter_chars = ["".join(random.choice(letters))
-                        for i in range(char_length)]
-        num_chars = ["".join(random.choice(nums)) for i in range(num_length)]
+        final = ["".join(random.choice(letters_and_nums))
+                 for i in range(char_length)]
 
-        print(letter_chars + num_chars)
+        return final
 
 
 url = URLShortener(
     "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-roguelike-dungeon-crawler-game")
 
-url.shorten()
+url.shorten(8)
