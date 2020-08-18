@@ -12,10 +12,6 @@ class URLShortener():
         final = ["".join(random.choice(letters_and_nums))
                  for i in range(char_length)]
 
-        return final
+        print("".join(final))
 
 
-url = URLShortener(
-    "https://www.freecodecamp.org/learn/coding-interview-prep/take-home-projects/build-a-roguelike-dungeon-crawler-game")
-
-url.shorten(8)
