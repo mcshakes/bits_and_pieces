@@ -1,11 +1,13 @@
-from url_shortener import URLShortener
-from flask import Flask
-from sqlalchemy import create_engine
-from contextlib import contextmanager
-
-from sqlalchemy.orm import sessionmaker
-from config import DATABASE_URI
 from models import Base, Link
+from config import DATABASE_URI
+from sqlalchemy.orm import sessionmaker
+from contextlib import contextmanager
+from sqlalchemy import create_engine
+from flask import Flask
+from url_shortener import URLShortener
+from dotenv import load_dotenv
+load_dotenv(verbose=True)
+
 
 engine = create_engine(DATABASE_URI)
 
