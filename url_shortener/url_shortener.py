@@ -12,6 +12,4 @@ class URLShortener():
         final = ["".join(random.choice(letters_and_nums))
                  for i in range(char_length)]
 
-        print("".join(final))
-
-
+        return "".join(final)
