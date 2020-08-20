@@ -12,11 +12,11 @@ class Deque():
 
     # remove from left side
     def remove_front(self):
-        self.collection.pop()
+        return self.collection.pop(0)
 
     # remove from right side
     def remove_rear(self):
-        del self.collection[-1]
+        return self.collection.pop()
 
     def is_empty(self):
         return self.collection == 0
