@@ -28,5 +28,5 @@ class Graph:
         result = ""
         for src in self.edges:
             for dest in self.edges[src]:
-                result = result + src.get_name() + " ---> " + dest.get_name()
+                result = result + src.get_name() + " ---> " + dest.get_name() + "\n"
         return result
