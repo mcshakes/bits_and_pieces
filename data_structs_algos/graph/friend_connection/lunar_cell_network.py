@@ -3,7 +3,7 @@ from node import Node
 from edge import Edge
 
 
-def build_friend_network(graph_type):
+def build_cell_network(graph_type):
     network = graph_type()  # the incoming graph type
     names = ("Mike - Adam Selene", "Manny - Bob", "Prof - Billy", "Wyoh - Beth", "Cindy",
              "Chuck", "Chubb", "Carlos", "Candice", "Charro", "Carly", "Callie", "Cassie")
@@ -48,5 +48,17 @@ def build_friend_network(graph_type):
     return network
 
 
-g = build_friend_network(Graph)
+g = build_cell_network(Graph)
 print(g)
+
+# CREATE TABLE restaurants(
+#     id BIGSERIAL NOT NULL PRIMARY KEY,
+#     name VARCHAR(50) NOT NULL,
+#     street_address VARCHAR(50) NOT NULL,
+#     city VARCHAR(50) NOT NULL,
+#     zipcode VARCHAR(50) NOT NULL,
+#     price_range INT NOT NULL check(price_range >= 1 and price_range <= 5),
+#     food_type VARCHAR(50) NOT NULL
+# )
+
+# INSERT INTO restaurants(name, street_address, city, zipcode, price_range, food_type) values('Shake Shack', '2995 Larimer St', 'Denver', '80205', 2, 'fast casual')
