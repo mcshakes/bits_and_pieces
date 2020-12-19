@@ -47,17 +47,15 @@ def find_lowest_cost_unprocessed(costs):
 
     return lowest_cost_node
 
+
     # lowest cost node that is unprocessed
 node = find_lowest_cost_unprocessed(costs)
 
 while node is not None:  # if all nodes processed, this is done.
-
     cost = costs[node]
     neighbors = graph[node]
 
     for n in neighbors.keys():
-        import code
-        code.interact(local=dict(globals(), **locals()))
 
         new_cost = cost + neighbors[n]
 
@@ -66,3 +64,6 @@ while node is not None:  # if all nodes processed, this is done.
             parents[n] = node
     processed.append(node)
     node = find_lowest_cost_unprocessed(costs)
+
+# import code
+#         code.interact(local=dict(globals(), **locals()))
